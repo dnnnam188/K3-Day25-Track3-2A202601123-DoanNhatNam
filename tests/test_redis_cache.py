@@ -19,7 +19,7 @@ def _redis_available() -> bool:
         r.ping()
         r.close()
         return True
-    except Exception:
+    except Exception:  # noqa: BLE001
         return False
 
 
